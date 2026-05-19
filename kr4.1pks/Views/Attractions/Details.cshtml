@@ -1,0 +1,28 @@
+﻿@model Attraction
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<div class="mb-4">
+    <a asp-controller="Cities" asp-action="Details" asp-route-id="@Model.CityId" class="btn btn-secondary">&larr; Вернуться к городу</a>
+</div>
+
+<div class="row">
+    <div class="col-md-5">
+        <img src="@Model.PhotoUrl" class="img-fluid rounded mb-3" alt="@Model.Name" />
+    </div>
+    <div class="col-md-7">
+        <h1>@Model.Name</h1>
+        @if (!string.IsNullOrWhiteSpace(Model.Description))
+        {
+            <p><strong>Описание:</strong> @Model.Description</p>
+        }
+        @if (!string.IsNullOrWhiteSpace(Model.History))
+        {
+            <h4>История</h4>
+            <p>@Model.History</p>
+        }
+        <p><strong>Часы работы:</strong> @(string.IsNullOrWhiteSpace(Model.OpeningHours) ? "не указано" : Model.OpeningHours)</p>
+        <p><strong>Стоимость:</strong> @(string.IsNullOrWhiteSpace(Model.EntranceFee) ? "не указана" : Model.EntranceFee)</p>
+    </div>
+</div>

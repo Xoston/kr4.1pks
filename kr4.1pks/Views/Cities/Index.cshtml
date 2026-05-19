@@ -1,0 +1,42 @@
+﻿@model IEnumerable<City>
+@{
+    ViewData["Title"] = "Города";
+}
+
+<h2 class="mb-4">Города России</h2>
+
+<form asp-action="Index" method="get" class="row g-3 mb-4">
+    <div class="col-auto">
+        <input type="text" name="search" class="form-control" placeholder="Поиск по названию..." value="@ViewData["CurrentSearch"]" />
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Найти</button>
+    </div>
+    <div class="col-auto">
+        <a asp-action="Index" class="btn btn-secondary">Сбросить</a>
+    </div>
+</form>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    @foreach (var city in Model)
+    {
+        <div class="col">
+            <div class="card h-100 city-card">
+                <img src="@city.PhotoUrl" class="card-img-top" alt="@city.Name" />
+                <div class="card-body">
+                    <h5 class="card-title">@city.Name</h5>
+                    <p class="card-text"><strong>Регион:</strong> @city.Region</p>
+                    <p class="card-text"><strong>Население:</strong> @city.Population.ToString("N0") чел.</p>
+                </div>
+                <div class="card-footer">
+                    <a asp-action="Details" asp-route-id="@city.Id" class="btn btn-outline-primary w-100">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">Города не найдены. Попробуйте изменить запрос.</div>
+}
