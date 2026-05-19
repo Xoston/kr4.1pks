@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Danzl\\kr4.1pks\\kr4.1pks\\TourGuide.csproj": {}
+    "C:\\Users\\Danzl\\kr4.1pks\\kr4.1pks\\TourGuide.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Danzl\\kr4.1pks\\kr4.1pks\\TourGuide.csproj": {
+    "C:\\Users\\Danzl\\kr4.1pks\\kr4.1pks\\TourGuide.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Danzl\\kr4.1pks\\kr4.1pks\\TourGuide.csproj",
+        "projectUniqueName": "C:\\Users\\Danzl\\kr4.1pks\\kr4.1pks\\TourGuide.csproj",
         "projectName": "TourGuide",
-        "projectPath": "c:\\Users\\Danzl\\kr4.1pks\\kr4.1pks\\TourGuide.csproj",
+        "projectPath": "C:\\Users\\Danzl\\kr4.1pks\\kr4.1pks\\TourGuide.csproj",
         "packagesPath": "C:\\Users\\Danzl\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Danzl\\kr4.1pks\\kr4.1pks\\obj\\",
+        "outputPath": "C:\\Users\\Danzl\\kr4.1pks\\kr4.1pks\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Danzl\\AppData\\Roaming\\NuGet\\NuGet.Config"
